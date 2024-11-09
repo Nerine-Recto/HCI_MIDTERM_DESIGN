@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your digital assistant for visually accessible web design and tools">
+    <title>VisionEase - Accessibility Tools for Visually Impaired Users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="app-title">VisionEase</h1>
+        <p class="app-tagline">Empowering visually impaired users with accessible web tools and features</p>
+    </header>
+
+    <div id="main-content" class="main-content" role="main">
+        <h2>Features to Enhance Your Accessibility Experience</h2>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <h3>Accessibility Best Practices</h3>
+                <ul>
+                    <li>High contrast color schemes</li>
+                    <li>Clear typography and spacing</li>
+                    <li>Keyboard navigation support</li>
+                    <li>Screen reader compatibility</li>
+                    <li>Audio feedback integration</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Testing & Simulation Tools</h3>
+                <ul>
+                    <li>Screen reader simulation</li>
+                    <li>Contrast checkers</li>
+                    <li>Color blindness simulators</li>
+                </ul>
+            </article>
+        </div>
+
+        <section class="tool-demo" aria-labelledby="tool-demo-heading">
+            <h2 id="tool-demo-heading">Interactive Accessibility Demo</h2>
+            <div class="controls">
+                <button class="button" onclick="toggleScreenReader()">
+                    Screen Reader Demo
+                </button>
+                <button class="button" onclick="toggleColorBlindness()">
+                    Color Blindness Simulator
+                </button>
+            </div>
+        </section>
+    </div> <!-- End of main content div -->
+
+    <div class="accessibility-menu" role="complementary">
+        <h2>Customize Your Accessibility Settings</h2>
+        <div class="tool-option">
+            <label for="font-size">Text Size</label>
+            <input type="range" id="font-size" min="12" max="24" value="16">
+        </div>
+        <div class="tool-option">
+            <label for="contrast">Contrast</label>
+            <input type="range" id="contrast" min="1" max="3" step="0.1" value="1">
+        </div>
+        <div class="tool-option">
+            <label for="speech-rate">Speech Rate</label>
+            <input type="range" id="speech-rate" min="0.5" max="2" step="0.1" value="1">
+        </div>
+        <button class="button" onclick="resetAccessibility()">
+            Reset Settings
+        </button>
+    </div>
+
+    <div class="audio-controls">
+        <button class="button" onclick="toggleSound()">
+            Toggle Sound
+        </button>
+        <div class="form-control">
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
